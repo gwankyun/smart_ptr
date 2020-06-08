@@ -18,7 +18,8 @@ set(project smart_ptr)
 project(${project})
 
 add_executable(${project} "")
-target_sources(${project} PRIVATE src/main.cpp include/smart_ptr.hpp include/compile_features.h)
+target_sources(${project} PRIVATE
+	src/main.cpp include/smart_ptr.hpp include/compile_features.h include/log.hpp include/ControlBlock.hpp)
 target_include_directories(${project} PRIVATE include)
 
 if(${MSVC})
